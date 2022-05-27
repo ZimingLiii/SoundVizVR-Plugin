@@ -1,0 +1,58 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &7069690913325663453
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 7069690913325663443}
+  - component: {fileID: 7069690913325663440}
+  m_Layer: 0
+  m_Name: SoundVizVR Manager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &7069690913325663443
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7069690913325663453}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &7069690913325663440
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7069690913325663453}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 49f54ffd8b6fb844399c6bb60f58f590, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  playerObject: {fileID: 0}
+  IndicatorPrefab: {fileID: 1250795926605351105, guid: 211f6680da93ec94783415b180064630, type: 3}
+  HUDMapPrefab: {fileID: 3735502553229507753, guid: 4f3ecda7bac1a7444965ec5cea9806b9, type: 3}
+  MiniMapCameraPrefab: {fileID: 1346892748241840589, guid: 2a69192c9772c0f48bf2330baa17346a, type: 3}
+  PlayerOnMapPrefab: {fileID: 2743715593828901263, guid: 67569503d15e63c42a8c237ac9c7b9bd, type: 3}
+  MySoundClipList: []
+  onObjectIndicatorState: 0
+  isIconicTagIndicator: 0
+  isTextTagIndicator: 0
+  isIconicMapIndicator: 0
+  isTextMapIndicator: 0
+  mySoundVizState: 0
