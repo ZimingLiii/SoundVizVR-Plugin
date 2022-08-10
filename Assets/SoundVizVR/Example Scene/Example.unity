@@ -391,6 +391,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 634340253}
     - target: {fileID: 7069690913325663440, guid: 1f6ab824b124ba847a92fe365de5a935, type: 3}
+      propertyPath: miniMapOpacity
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7069690913325663440, guid: 1f6ab824b124ba847a92fe365de5a935, type: 3}
       propertyPath: OVRPlayerObject
       value: 
       objectReference: {fileID: 634340253}
@@ -1309,7 +1313,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 017d53a8a61ab394fa06723cd8404d33, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  mySoundViz: 2
 --- !u!4 &1617168023
 Transform:
   m_ObjectHideFlags: 0

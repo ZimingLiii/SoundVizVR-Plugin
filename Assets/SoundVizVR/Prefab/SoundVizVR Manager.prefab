@@ -44,15 +44,25 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 49f54ffd8b6fb844399c6bb60f58f590, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  playerObject: {fileID: 0}
+  OVRPlayerObject: {fileID: 0}
   IndicatorPrefab: {fileID: 1250795926605351105, guid: 211f6680da93ec94783415b180064630, type: 3}
   HUDMapPrefab: {fileID: 3735502553229507753, guid: 4f3ecda7bac1a7444965ec5cea9806b9, type: 3}
   MiniMapCameraPrefab: {fileID: 1346892748241840589, guid: 2a69192c9772c0f48bf2330baa17346a, type: 3}
   PlayerOnMapPrefab: {fileID: 2743715593828901263, guid: 67569503d15e63c42a8c237ac9c7b9bd, type: 3}
-  MySoundClipList: []
+  SoundVizIndicatorList: []
   onObjectIndicatorState: 0
   isIconicTagIndicator: 0
   isTextTagIndicator: 0
   isIconicMapIndicator: 0
   isTextMapIndicator: 0
-  mySoundVizState: 0
+  miniMapCanvasSize: {x: 1110, y: 624}
+  miniMapPosition: {x: -240, y: -245, z: 660}
+  miniMapTiltAngle: {x: 0, y: -20, z: 0}
+  miniMapCameraHeight: 8.5
+  miniMapOpacity: 1
+  indicatorSampleDataLength: 1024
+  indicatorUpdateStep: 0.1
+  minIndicatorScale: 0.2
+  maxIndicatorScale: 3
+  indicatorScaleStep: 0.5
+  currentSoundVizState: 0

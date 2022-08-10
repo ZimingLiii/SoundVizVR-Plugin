@@ -29,9 +29,13 @@ public class IndicatorController : MonoBehaviour
     private Transform tagIconicIndicator;
     private Transform tagTextIndicator;
     [HideInInspector]
-    public float minIndicatorScale = 0.2f;
+    public float minIndicatorScaleOnMiniMap = 0.2f;
     [HideInInspector]
-    public float maxIndicatorScale = 3.0f;
+    public float maxIndicatorScaleOnMiniMap = 3.0f;
+    [HideInInspector]
+    public float minIndicatorScaleOnEnv = 0.07f;
+    [HideInInspector]
+    public float maxIndicatorScaleOnEnv = 1.05f;
     [HideInInspector]
     public float scaleStep = 0.5f;
 
@@ -202,23 +206,30 @@ public class IndicatorController : MonoBehaviour
 
     void AnimateLoudnessIndicator()
     {
-        float tarScale = minIndicatorScale + (maxIndicatorScale - minIndicatorScale) * clipLoudness;
+        float minimapTarScale = minIndicatorScaleOnMiniMap + (maxIndicatorScaleOnMiniMap - minIndicatorScaleOnMiniMap) * clipLoudness;
+        float tagTarScale = minIndicatorScaleOnEnv + (maxIndicatorScaleOnEnv - minIndicatorScaleOnEnv) * clipLoudness;
+        
+        float minimapOffset = 1f;
+        float tagOffset = 1f;
 
-        float TagScale = 0.35f;
+        if (SoundVizVRManager.instance.isTextMapIndicator)
+        {
+            minimapOffset = 0.7f;
+        }
 
         if (SoundVizVRManager.instance.isTextTagIndicator)
         {
-            TagScale = 0.25f;
+            tagOffset = 0.7f;
         }
 
         if (mapIndicator && mapIndicator.activeSelf)
         {
-            mapIndicator.transform.localScale = Vector3.Lerp(new Vector3(tarScale, tarScale, tarScale), mapIndicator.transform.localScale, scaleStep);
+            mapIndicator.transform.localScale = Vector3.Lerp(new Vector3(minimapTarScale * minimapOffset, minimapTarScale * minimapOffset, minimapTarScale * minimapOffset), mapIndicator.transform.localScale, scaleStep);
         }
 
         if (tagIndicator && tagIndicator.activeSelf)
         {
-            tagIndicator.transform.localScale = Vector3.Lerp(new Vector3(tarScale * TagScale, tarScale * TagScale, tarScale * TagScale), tagIndicator.transform.localScale, scaleStep);
+            tagIndicator.transform.localScale = Vector3.Lerp(new Vector3(tagTarScale * tagOffset, tagTarScale * tagOffset, tagTarScale * tagOffset), tagIndicator.transform.localScale, scaleStep);
         }
     }
 }

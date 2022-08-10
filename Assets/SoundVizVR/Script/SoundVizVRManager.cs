@@ -72,16 +72,28 @@ public class SoundVizVRManager : MonoBehaviour
     [NonSerialized]
     public List<string> playingClipNames = new List<string>();
 
-    public Vector2 miniMapCanvasSize = new Vector2(1110, 624);
-    public Vector3 miniMapPosition = new Vector3(-240, -245, 660);
-    public Vector3 miniMapTiltAngle = new Vector3(0, -20f, 0);
-    public float miniMapCameraHeight = 8.5f;
+    [SerializeField]
+    private Vector2 miniMapCanvasSize = new Vector2(1110, 624);
+    
+    [SerializeField]
+    private Vector3 miniMapPosition = new Vector3(-240, -245, 660);
+
+    [SerializeField]
+    private Vector3 miniMapTiltAngle = new Vector3(0, -20f, 0);
+
+    [SerializeField]
+    private float miniMapCameraHeight = 8.5f;
+
+    [SerializeField]
+    private float miniMapOpacity = 1f;
 
     // Indicator Property
     public int indicatorSampleDataLength = 1024;
     public float indicatorUpdateStep = 0.1f;
-    public float minIndicatorScale = 0.2f;
-    public float maxIndicatorScale = 3.0f;
+    public float minIndicatorScaleOnMiniMap = 0.2f;
+    public float maxIndicatorScaleOnMiniMap = 3.0f;
+    public float minIndicatorScaleOnEnv = 0.07f;
+    public float maxIndicatorScaleOnEnv = 1.05f;
     public float indicatorScaleStep = 0.5f;
 
     public SoundVizType currentSoundVizState = SoundVizType.Off;
@@ -168,6 +180,25 @@ public class SoundVizVRManager : MonoBehaviour
         HUDMap.transform.localPosition = Vector3.zero;
         HUDMap.transform.localScale = Vector3.one;
 
+        // MiniMap Opacity
+        var myOpacity = 1f;
+        if (miniMapOpacity > 1 || miniMapOpacity < 0)
+        {
+            myOpacity = 1f;
+        }
+        else
+        {
+            myOpacity = miniMapOpacity;
+        }
+
+        var image1 = HUDMap.gameObject.GetComponent<Image>();
+        var image2 = HUDMap.transform.GetChild(0).gameObject.GetComponent<Image>();
+        var image3 = HUDMap.transform.GetChild(0).GetChild(0).gameObject.GetComponent<RawImage>();
+
+        image1.color = new Color(image1.color.r, image1.color.g, image1.color.b, myOpacity);
+        image2.color = new Color(image2.color.r, image2.color.g, image2.color.b, myOpacity);
+        image3.color = new Color(image3.color.r, image3.color.g, image3.color.b, myOpacity);
+
         playerIndicatorOnMap = Instantiate(PlayerOnMapPrefab, Vector3.zero, Quaternion.identity);
         playerIndicatorOnMap.layer = LayerMask.NameToLayer("Map");
 
@@ -208,8 +239,10 @@ public class SoundVizVRManager : MonoBehaviour
 
             objIndicatorController.sampleDataLength = indicatorSampleDataLength;
             objIndicatorController.updateStep = indicatorUpdateStep;
-            objIndicatorController.minIndicatorScale = minIndicatorScale;
-            objIndicatorController.maxIndicatorScale = maxIndicatorScale;
+            objIndicatorController.minIndicatorScaleOnMiniMap = minIndicatorScaleOnMiniMap;
+            objIndicatorController.maxIndicatorScaleOnMiniMap = maxIndicatorScaleOnMiniMap;
+            objIndicatorController.minIndicatorScaleOnEnv = minIndicatorScaleOnEnv;
+            objIndicatorController.maxIndicatorScaleOnEnv = maxIndicatorScaleOnEnv;
             objIndicatorController.scaleStep = indicatorScaleStep;
 
             go.transform.SetParent(container);
