@@ -6,7 +6,7 @@ SoundVizVR is a sound visualization plugin package for Unity VR projects. (For n
 
 SoundVizVR uses iconic and textual sound visualization representation methods on the Head-Up Display (HUD) minimap and environmental indicators to improve the accessibility of spatial sounds in VR.
 
-![Untitled](SoundVizVR%20Plugin%20Documentation%209a99ffc7c36141c7b8fab734b9d33a71/Untitled.png)
+![Intro](doc/Intro.png)
 
 The SoundVizVR plugin binds the sound visualization indicator with the pre-defined descriptive text or icon to a sound source object in the Unity scene. Its textual and iconic representation methods enable the VR user to “see” the existence, loudness, duration, and sound type of the noises made by the sounding object.
 
@@ -36,13 +36,13 @@ A demo video related to our preliminary research of the plugin: (you may see wha
 1. Make sure the latest [Oculus Integration package](https://assetstore.unity.com/packages/tools/integration/oculus-integration-82022) has been imported into your Unity VR project
 2. Make sure there is an **OVRCameraRig** or **OVRPlayerController** prefab object that exists in your project hierarchy. If not, you may find and import either prefab in this location: **Assets/Oculus/VR/Prefabs** *(You can see this folder when the **Oculus Integration** package has been imported)*
 
-![Untitled](SoundVizVR%20Plugin%20Documentation%209a99ffc7c36141c7b8fab734b9d33a71/Untitled%201.png)
+![OVRCameraRig](doc/OVRCameraRig.png)
 
-![Untitled](SoundVizVR%20Plugin%20Documentation%209a99ffc7c36141c7b8fab734b9d33a71/Untitled%202.png)
+![OVRPlayerController](doc/OVRPlayerController.png)
 
 1. Make sure the **XR Plug-in Management** in the **Project Settings** is installed, and the **Oculus** checkbox under the Windows tab is checked
 
-![Untitled](SoundVizVR%20Plugin%20Documentation%209a99ffc7c36141c7b8fab734b9d33a71/Untitled%203.png)
+![XR Plugin Management](doc/XRPluginManagement.png)
 
 > If you need help in setting up an Oculus development environment on your PC, you may find this article helpful: [6 Steps to Set Up Your Oculus Rift with Unity in Less Than 10 Minutes [2021 Update] | Circuit Stream](https://circuitstream.com/blog/oculus-unity-setup/)
 > 
@@ -54,42 +54,42 @@ A demo video related to our preliminary research of the plugin: (you may see wha
 1. In the menu bar, choose **Assets > Import Package > Custom Package…,** and the **Import Unity Package** dialog box displays. Find and import the **SoundVizVR-v1.1.unitypackage** file with all the items in the package pre-checked, and ready to install.
 2. Select **Import** and Unity puts the contents of the package into a **SoundVizVR** folder, which you can access from your **Project View**.
 
-![Untitled](SoundVizVR%20Plugin%20Documentation%209a99ffc7c36141c7b8fab734b9d33a71/Untitled%204.png)
+![ImportPackage](doc/ImportPackage.png)
 
 # How To Use
 
 1. In the **Project View**, navigate to **Assets** / **SoundVizVR** / **Prefab**.
 2. From there, click and drag the **SoundVizVR Manager** prefab into your scene.
     
-    ![Untitled](SoundVizVR%20Plugin%20Documentation%209a99ffc7c36141c7b8fab734b9d33a71/Untitled%205.png)
+    ![SoundVizVR Manager Prefab](doc/SoundVizVRManagerPrefab.png)
     
 3. Click on the **SoundVizVR Manager** object in the **Hierarchy View**, so you can view its properties in the inspector
 
-![Untitled](SoundVizVR%20Plugin%20Documentation%209a99ffc7c36141c7b8fab734b9d33a71/Untitled%206.png)
+![SoundVizVR Manager Inspector](doc/SoundVizVRManagerInspector.png)
 
-1. Drag the **OVRCameraRig** or **OVRPlayerController** object to the `OVR Player Object` field of the **SoundVizVR Manager** component in the inspector
+4. Drag the **OVRCameraRig** or **OVRPlayerController** object to the `OVR Player Object` field of the **SoundVizVR Manager** component in the inspector
 
-![Untitled](SoundVizVR%20Plugin%20Documentation%209a99ffc7c36141c7b8fab734b9d33a71/Untitled%207.png)
+![Binding OVRCamera](doc/BindingOVRCamera.png)
 
-1. Create some **SoundVizVR Indicator** items inside the **Sound Viz Indicator List** by clicking on the “**Plus**” button. Then, fill in the blank of each item. (Don’t forget to bind the indicator to the existing spatial sound source in the scene by dragging the sound source object from the **Hierarchy View** to the `Binding Object` field of an item.)
+5. Create some **SoundVizVR Indicator** items inside the **Sound Viz Indicator List** by clicking on the “**Plus**” button. Then, fill in the blank of each item. (Don’t forget to bind the indicator to the existing spatial sound source in the scene by dragging the sound source object from the **Hierarchy View** to the `Binding Object` field of an item.)
 
-![Untitled](SoundVizVR%20Plugin%20Documentation%209a99ffc7c36141c7b8fab734b9d33a71/Untitled%208.png)
+![SoundViz Indicator List](doc/SoundVizIndicatorList.png)
 
-1. Specify the state of the sound visualization by choosing an option in the **Current Sound Viz State**
+6. Specify the state of the sound visualization by choosing an option in the **Current Sound Viz State**
 
-![Untitled](SoundVizVR%20Plugin%20Documentation%209a99ffc7c36141c7b8fab734b9d33a71/Untitled%209.png)
+![Current SoundViz State](doc/CurrentSoundVizState.png)
 
-1. Add a “**Map**” layer in the Layers editor
+7. Add a “**Map**” layer in the Layers editor
 
-![Untitled](SoundVizVR%20Plugin%20Documentation%209a99ffc7c36141c7b8fab734b9d33a71/Untitled%2010.png)
+![Map in the Layer selection](doc/MapInLayer.png)
 
-1. Click the **Play** button.
+8. Click the **Play** button.
 
 # Example Scene
 
 There is an example scene for your reference in the package: **SoundVizVR** / **Example Scene** / **Example.** It might help you get a better idea of using the SoundVizVR plugin in a Unity VR project.
 
-![Untitled](SoundVizVR%20Plugin%20Documentation%209a99ffc7c36141c7b8fab734b9d33a71/Untitled%2011.png)
+![Example Scene](doc/ExampleScene.png)
 
 # Options
 
