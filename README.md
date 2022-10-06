@@ -33,7 +33,7 @@ A demo video related to our preliminary research of the plugin: (you may see wha
 
 ## Before you start
 
-1. Make sure the latest [Oculus Integration package](https://assetstore.unity.com/packages/tools/integration/oculus-integration-82022) has been imported into your Unity VR project
+1. Make sure the latest **[Oculus Integration package](https://assetstore.unity.com/packages/tools/integration/oculus-integration-82022)** has been imported into your Unity VR project
 2. Make sure there is an **OVRCameraRig** or **OVRPlayerController** prefab object that exists in your project hierarchy. If not, you may find and import either prefab in this location: **Assets/Oculus/VR/Prefabs** *(You can see this folder when the **Oculus Integration** package has been imported)*
 
 ![OVRCameraRig](doc/OVRCameraRig.png)
@@ -51,7 +51,7 @@ A demo video related to our preliminary research of the plugin: (you may see wha
 
 *[From Unity editor:](https://docs.unity3d.com/560/Documentation/Manual/AssetPackages.html)*
 
-1. In the menu bar, choose **Assets > Import Package > Custom Package…,** and the **Import Unity Package** dialog box displays. Find and import the **SoundVizVR-v1.1.unitypackage** file with all the items in the package pre-checked, and ready to install.
+1. In the menu bar, choose **Assets > Import Package > Custom Package…,** and the **Import Unity Package** dialog box displays. Find and import the **SoundVizVR.unitypackage** file with all the items in the package pre-checked, and ready to install.
 2. Select **Import** and Unity puts the contents of the package into a **SoundVizVR** folder, which you can access from your **Project View**.
 
 ![ImportPackage](doc/ImportPackage.png)
@@ -83,7 +83,15 @@ A demo video related to our preliminary research of the plugin: (you may see wha
 
 ![Map in the Layer selection](doc/MapInLayer.png)
 
-8. Click the **Play** button.
+8. In the **Hierarchy View**, locate **OVRCameraRig > TrackingSpace > CenterEyeAnchor** (or OVRPlayerController > OVRCameraRig > TrackingSpace > CenterEyeAnchor).
+
+![CenterEyeAnchor in the Hierarchy](doc/CenterEyeAnchorHierarchy.png)
+
+Then, locate **Camera > CullingMask** in the **CenterEyeAnchor's Inspector**. In its dropdown menu, uncheck the **"Map"** item.
+
+![CenterEyeAnchor in the Inspector](doc/CenterEyeAnchorInspector.png)
+
+9. Well done! You are all set.
 
 # Example Scene
 
