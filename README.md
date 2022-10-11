@@ -105,8 +105,7 @@ There is an example scene for your reference in the package: **SoundVizVR** / *
 
 | Option | Description | Type | Default |
 | --- | --- | --- | --- |
-| OVR Player Object | The existing OVR camera object in the hierarchy
-(Either OVRCameraRig or OVRPlayerController from the folder Oculus/VR/Prefabs is recommended) | GameObject |  |
+| OVR Player Object | The existing OVR camera object in the hierarchy (Either OVRCameraRig or OVRPlayerController from the folder Oculus>VR>Prefabs is recommended) | GameObject |
 | Indicator Prefab | The Sound Indicator prefab that attaches to a spatial sound source | Prefab (GameObject) | IndicatorPrefab (Located in SoundVizVR/Prefab/Utils) |
 | HUD Map Prefab | The Minimap prefab that attaches to the HUD UI | Prefab (GameObject) | HUDMiniMap (Located in SoundVizVR/Prefab/Utils) |
 | Mini Map Camera Prefab | The Camera prefab to render the minimap’s texture | Prefab (GameObject) | MiniMapCam (Located in SoundVizVR/Prefab/Utils) |
@@ -124,8 +123,7 @@ There is an example scene for your reference in the package: **SoundVizVR** / *
 | Max Indicator Scale On Env | The maximal scale of the environmental indicator | float | 1.05 |
 | Mini Map Opacity | The opacity of the Mini Map (ranges from 0.0 - 1.0) | float | 1.0 |
 | Indicator Scale Step (Reduce the number if you want a smoother transition) | The rate of change of the indicator during the transition. | float | 0.5 |
-| Current Sound Viz State | The view of the sound visualization. 
-(Available Options: Off, IconMapWithIconTag, IconMapWithTextTag, TextMapWithIconTag, TextMapWithTextTag) | SoundVizType | SoundVizType.Off |
+| Current Sound Viz State | The view of the sound visualization. (Available Options: Off, IconMapWithIconTag, IconMapWithTextTag, TextMapWithIconTag, TextMapWithTextTag) | SoundVizType | SoundVizType.Off |
 
 ## SoundVizVR Indicator Object
 
