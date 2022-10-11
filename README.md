@@ -118,11 +118,11 @@ There is an example scene for your reference in the package: **SoundVizVR** / *
 | Mini Map Camera Height (Increase the number if you want a bigger FoV) | The height of the MiniMap’s camera. It relates to the field of view (FoV) of the map. | float | 8.5 |
 | Indicator Sample Data Length | The number of samples of the sound source audio. | int | 1024 |
 | Indicator Update Step | The update rate of the indicator | float | 0.1 |
-| Min Indicator Scale On Mini Map (new) | The minimal scale of the indicator on Mini Map | float | 0.2 |
-| Max Indicator Scale On Mini Map (new) | The maximal scale of the indicator on Mini Map | float | 3.0 |
-| Min Indicator Scale On Env (new) | The minimal scale of the environmental indicator | float | 0.07 |
-| Max Indicator Scale On Env (new) | The maximal scale of the environmental indicator | float | 1.05 |
-| Mini Map Opacity (new) | The opacity of the Mini Map (ranges from 0.0 - 1.0) | float | 1.0 |
+| Min Indicator Scale On Mini Map | The minimal scale of the indicator on Mini Map | float | 0.2 |
+| Max Indicator Scale On Mini Map | The maximal scale of the indicator on Mini Map | float | 3.0 |
+| Min Indicator Scale On Env | The minimal scale of the environmental indicator | float | 0.07 |
+| Max Indicator Scale On Env | The maximal scale of the environmental indicator | float | 1.05 |
+| Mini Map Opacity | The opacity of the Mini Map (ranges from 0.0 - 1.0) | float | 1.0 |
 | Indicator Scale Step (Reduce the number if you want a smoother transition) | The rate of change of the indicator during the transition. | float | 0.5 |
 | Current Sound Viz State | The view of the sound visualization. 
 (Available Options: Off, IconMapWithIconTag, IconMapWithTextTag, TextMapWithIconTag, TextMapWithTextTag) | SoundVizType | SoundVizType.Off |
