@@ -115,8 +115,7 @@ There is an example scene for your reference in the package: **SoundVizVR** / *
 | Mini Map Canvas Size | The dimension of the HUD UI canvas | Vector2 (X, Y) | (1110, 624) |
 | Mini Map Position | The MiniMap’s position on the HUD UI canvas | Vector3 (X, Y, Z) | (-240, -245, 660) |
 | Mini Map Tilt Angle | The MiniMap’s tilt angle on the HUD UI canvas | Vector3 (X, Y, Z) | (0, -20.0, 0) |
-| Mini Map Camera Height | The height of the MiniMap’s camera. It relates to the field of view (FoV) of the map.
-(Increase the number if you want a bigger FoV) | float | 8.5 |
+| Mini Map Camera Height (Increase the number if you want a bigger FoV) | The height of the MiniMap’s camera. It relates to the field of view (FoV) of the map. | float | 8.5 |
 | Indicator Sample Data Length | The number of samples of the sound source audio. | int | 1024 |
 | Indicator Update Step | The update rate of the indicator | float | 0.1 |
 | Min Indicator Scale On Mini Map (new) | The minimal scale of the indicator on Mini Map | float | 0.2 |
@@ -124,8 +123,7 @@ There is an example scene for your reference in the package: **SoundVizVR** / *
 | Min Indicator Scale On Env (new) | The minimal scale of the environmental indicator | float | 0.07 |
 | Max Indicator Scale On Env (new) | The maximal scale of the environmental indicator | float | 1.05 |
 | Mini Map Opacity (new) | The opacity of the Mini Map (ranges from 0.0 - 1.0) | float | 1.0 |
-| Indicator Scale Step | The rate of change of the indicator during the transition.
-(Reduce the number if you want a smoother transition) | float | 0.5 |
+| Indicator Scale Step (Reduce the number if you want a smoother transition) | The rate of change of the indicator during the transition. | float | 0.5 |
 | Current Sound Viz State | The view of the sound visualization. 
 (Available Options: Off, IconMapWithIconTag, IconMapWithTextTag, TextMapWithIconTag, TextMapWithTextTag) | SoundVizType | SoundVizType.Off |
 
