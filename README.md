@@ -18,7 +18,7 @@ In the Unity scene, the sound indicator will show up in the environment and on t
 
 A VR game named **"Animal Treasure Hunt"** which is designed and developed by *Huadong Zhang (@zhd407108459)* with the SoundVizVR plugin integrated to improve its sound accessibility.
 
-**[Download Link](https://drive.google.com/file/d/1vjowcMXnxJHSWnnN_gcfG-w6YWM7TkSk/view?usp=sharing)**
+**[Download Link](https://drive.google.com/file/d/1slz3EIMAZ6aer-qOZE_kTgHQMJr-zKZP/view?usp=sharing)**
 
 *For more details, please refer to its README.txt file.*
 
