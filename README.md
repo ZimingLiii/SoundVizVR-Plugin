@@ -12,7 +12,17 @@ The SoundVizVR plugin binds the sound visualization indicator with the pre-defin
 
 In the Unity scene, the sound indicator will show up in the environment and on the HUD minimap once it detects the binding object is making sounds. Meanwhile, the indicator will dynamically change its size to reveal the loudness of the sounds (scales up when the loudness goes up and scales down when the loudness goes down).
 
-## Demo Video
+# Demo
+
+## Game
+
+A VR game named **"Animal Treasure Hunt"** which is designed and developed by *Huadong Zhang (@zhd407108459)* with the SoundVizVR plugin integrated to improve its sound accessibility.
+
+**[Download Link](https://drive.google.com/file/d/1vjowcMXnxJHSWnnN_gcfG-w6YWM7TkSk/view?usp=sharing)**
+
+*For more details, please refer to its README.txt file.*
+
+## Video
 
 A demo video related to our preliminary research of the plugin: (you may see what the plugin looks like in 1:44 - 2:07)
 
